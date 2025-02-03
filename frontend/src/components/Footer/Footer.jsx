@@ -10,7 +10,7 @@ import {
 const Footer = () => {
   return (
     <footer className="footer bg-gray-900 text-white relative">
-      <div className="container mx-auto w-full max-w-screen-xl p-6 lg:py-8">
+      <div className="container mx-auto w-full max-w-screen-l p-4 lg:py-10">
         <div className="md:flex md:justify-between">
           <div className="mb-6 md:mb-0">
             <a href="https://silicon.ac.in/" className="flex items-center">
@@ -51,7 +51,7 @@ const Footer = () => {
             © 2025 <a href="#" className="hover:underline">Zygon</a>. All Rights Reserved.
           </span>
           <span className="text-sm text-gray-400 sm:text-center flex items-center">
-            Made with love <FaHeart className="m-1 text-red-500 relative top-[1px]" /> by Team SSC.
+            Made with love <FaHeart className="m-1 text-red-500 relative top-[1px]" />
           </span>
         </div>
         {/* Social Media Icons */}

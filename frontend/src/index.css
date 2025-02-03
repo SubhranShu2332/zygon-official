@@ -10,6 +10,6 @@
 
 @font-face {
   font-family: 'Black Bones';
-  src: url("../public/BlackBones.ttf") format('truetype');
+  src: url("/BlackBones.ttf") format('truetype');
 }
 
