@@ -11,7 +11,7 @@ function WhatsNew() {
     const handleScroll = () => {
       // Assuming styles are applied without the imported file, this might cause issues
       // if the styles object is used.
-      const features = document.querySelectorAll(.feature);
+      const features = document.querySelectorAll(`.feature`);
       features.forEach((feature) => {
         const rect = feature.getBoundingClientRect();
         const isInView = rect.top <= window.innerHeight * 0.75;
