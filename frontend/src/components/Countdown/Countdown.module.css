@@ -1,0 +1,187 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Bree+Serif&display=swap");
+/* *,
+*::after,
+*::before {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Bree Serif", serif;
+  font-size: 100px;
+} */
+
+.Countdownbody {
+  background-color: #080211;
+  /* background-image: url(/Designer.jpeg);
+  backdrop-filter: blur(8px); */
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Bree Serif", serif;
+  font-size: 100px;
+
+  /* background: linear-gradient(135deg, #ff9a9e 0%, #fad0c4 100%); */
+
+  color: #f65c83;
+  text-align: center;
+  height: auto;
+  /* padding-bottom: 40px; */
+}
+
+.title {
+  display: inline-flex;
+  color: #fff;
+  text-align: center;
+  font-size: 60px;
+  font-weight: 500;
+  word-spacing: 15px;
+  letter-spacing: 3px;
+  font-family: "Poppins", serif;
+  padding-top: 100px;
+}
+
+.title:hover {
+  color: rgb(79, 226, 221);
+}
+
+.flipCard {
+  position: relative;
+  display: inline-flex;
+  flex-direction: column;
+}
+
+.top,
+.bottom,
+.flipCard.flipCard.flip::after,
+.flipCard.flipCard.flip::before {
+  height: 0.75em;
+  line-height: 1;
+  padding: 0.25em;
+  overflow: hidden;
+}
+
+.top,
+.flipCard.flipCard.flip::before {
+  background-color: #2b2b44;
+  border-radius: 15px 15px 8px 8px;
+  border-bottom: 3px solid #1f1d28;
+}
+
+.bottom,
+.flipCard.flipCard.flip::after {
+  background-color: #34364f;
+  display: flex;
+  align-items: flex-end;
+  border-radius: 8px 8px 15px 15px;
+}
+
+.flipCard.flip::before {
+  position: absolute;
+  content: attr(data-prev);
+  width: 100%;
+  animation: flip-top 350ms ease-in;
+  transform-origin: bottom;
+}
+
+@keyframes flip-top {
+  100% {
+    transform: rotateX(90deg);
+  }
+}
+
+.flipCard.flip::after {
+  position: absolute;
+  bottom: 0;
+  content: attr(data-next);
+  width: 100%;
+  animation: flip-bottom 350ms ease-out 350ms;
+  transform-origin: top;
+  transform: rotateX(90deg);
+}
+
+@keyframes flip-bottom {
+  100% {
+    transform: rotateX(0deg);
+  }
+}
+
+.cardContainer {
+  margin: 0px 250px;
+  display: flex;
+  justify-content: space-around;
+}
+
+.tags {
+  font-size: 20px;
+  font-family: "Poppins", sans-serif;
+  letter-spacing: 5px;
+  margin-top: 30px;
+  color: #fff;
+}
+
+.days,
+.hours,
+.minutes,
+.seconds {
+  text-align: center;
+}
+
+@media (max-width: 840px) {
+  .cardContainer {
+    margin: 0px 0px;
+  }
+
+  .title {
+    font-size: 50px;
+    word-spacing: 0px;
+    padding-top: 0px;
+    /* margin-bottom: 150px; */
+  }
+}
+@media (max-width: 768px) {
+  .title {
+    font-size: 45px;
+    word-spacing: 0px;
+  }
+}
+@media (max-width: 480px) {
+  .Countdownbody {
+    font-size: 45px;
+  }
+
+  .title {
+    font-size: 26px;
+    word-spacing: 0px;
+    letter-spacing: 0px;
+  }
+
+  .top,
+  .bottom {
+    height: 40px;
+    width: 70px;
+    font-size: 45px;
+  }
+
+  .tags {
+    font-size: 10px;
+    letter-spacing: 2px;
+  }
+
+  .top,
+  .bottom,
+  .flipCard.flipCard.flip::after,
+  .flipCard.flipCard.flip::before {
+    height: 0.77em;
+    width: auto;
+  }
+}
+@media (max-width: 376px) {
+  .title {
+    font-size: 25.5px;
+  }
+}
+@media (max-width: 320px) {
+  .title {
+    font-size: 22.5px;
+  }
+}

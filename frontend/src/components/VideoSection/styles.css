@@ -1,0 +1,37 @@
+:root {
+    --salmon: salmon;
+    --black: black;
+    --white: white;
+    --cyan: cyan;
+}
+
+body[theme='black'] {
+    background-color: var(--black);
+}
+body[theme='black'] .section {
+    color: var(--white);
+}
+body[theme='cyan'] {
+    background-color: var(--cyan);
+}
+body[theme='salmon'] {
+    background-color: var(--salmon);
+}
+body[theme='white'] {
+    background-color: var(--white);
+}
+body[theme='white'] .section {
+    color: var(--black);
+}
+
+*::selection {
+    background-color: var(--salmon);
+}
+
+.videoDiv {
+    clip-path: circle(var(--clip) at 50% 50%);
+}
+
+.row h1 {
+    font-family:  sans-serif;
+}

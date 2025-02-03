@@ -1,0 +1,75 @@
+.new_footer_top {
+    position: relative;
+    width: 100%;
+    height: 150px;
+  }
+  
+  .new_footer_top .footer_bg {
+    position: absolute;
+    bottom: 0;
+    z-index: 1;
+    background-image: url('footer.gif');
+    background-repeat: no-repeat;
+    background-size: cover; 
+    background-position: center;
+    width: 100%;
+    height: 280px;
+  }
+  
+  
+  /* Moving Image 1 */
+  .new_footer_top .footer_bg .footer_bg_one {
+    background: url("https://media4.giphy.com/media/v1.Y2lkPTc5MGI3NjExZXF3aWk5ZjYyM255c2RqdXptaHV2aGhtMHpud2x1amRvd2phYmZnZCZlcD12MV9naWZzX3NlYXJjaCZjdD1z/jQEoQirqCJF3wukoPW/giphy.gif")
+      no-repeat center center;
+    display: flex;
+    width: 100px;
+    height: 105px;
+    background-size: 100%;
+    position: absolute;
+    bottom: 0;
+    left: 30%;
+    -webkit-animation: myfirst 20s linear infinite;
+    animation: myfirst 20s linear infinite;
+  }
+  
+  /* Moving Image 2 */
+  .new_footer_top .footer_bg .footer_bg_two {
+    background: url("https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEhyLGwEUVwPK6Vi8xXMymsc-ZXVwLWyXhogZxbcXQYSY55REw_0D4VTQnsVzCrL7nsyjd0P7RVOI5NKJbQ75koZIalD8mqbMquP20fL3DxsWngKkOLOzoOf9sMuxlbyfkIBTsDw5WFUj-YJiI50yzgVjF8cZPHhEjkOP_PRTQXDHEq8AyWpBiJdN9SfQA/s16000/cyclist.gif")
+      no-repeat center center;
+    width: 88px;
+    height: 100px;
+    background-size: 100%;
+    bottom: 0;
+    left: 38%;
+    position: absolute;
+    -webkit-animation: myfirst 15s linear infinite;
+    animation: myfirst 15s linear infinite;
+  }
+  
+  /* Animation for moving left to right */
+  @-moz-keyframes myfirst {
+    0% {
+      left: -25%;
+    }
+    100% {
+      left: 100%;
+    }
+  }
+  
+  @-webkit-keyframes myfirst {
+    0% {
+      left: -25%;
+    }
+    100% {
+      left: 100%;
+    }
+  }
+  
+  @keyframes myfirst {
+    0% {
+      left: -25%;
+    }
+    100% {
+      left: 100%;
+    }
+  }

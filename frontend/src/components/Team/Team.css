@@ -1,0 +1,255 @@
+Global Styles
+:root {
+    --primary-color: #fad00c;
+    --secondary-color: #323444;
+    --text-color: #eceaed;
+    --bg-color: rgba(0, 0, 0, 0.772);
+}
+
+.container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: var(--bg-color);
+    overflow-x: hidden;
+    height: 100vh;
+    flex-direction: column;
+    margin: 0;
+}
+
+a {
+    text-decoration: none;
+}
+
+input {
+    display: none;
+}
+
+/* Container */
+.container {
+    width: 100%;
+    max-width: 600px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    margin-bottom: 50px;
+    padding: 0 15px;
+}
+
+/* Arrow Button Styling */
+.arrow-button {
+    background-color: transparent;
+    border: none;
+    font-size: 24px;
+    color: #fff;
+    cursor: pointer;
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    z-index: 10;
+    transition: transform 0.3s ease;
+}
+
+.arrow-button:focus {
+    outline: 2px solid var(--primary-color);
+}
+
+/* Position the left and right buttons */
+#prev-button {
+    left: 10px;
+}
+
+#next-button {
+    right: 10px;
+}
+
+/* Card Slider */
+.cards {
+    position: relative;
+    width: 100%;
+    max-width: 430px;
+    height: 500px;
+    perspective: 1000px;
+    transform-style: preserve-3d;
+    margin-bottom: 20px;
+}
+
+.cards label {
+    position: absolute;
+    width: 100%;
+    cursor: pointer;
+    transition: transform 0.5s ease;
+}
+
+.cards .card {
+    position: relative;
+    background-color: var(--secondary-color);
+    border-radius: 10px;
+    padding: 25px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+/* Card Image */
+.cards .image {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    padding: 0 15px;
+}
+
+.cards .image img {
+    width: 100%;
+    max-height: 350px;
+    object-fit: cover;
+    border-radius: 5px;
+    box-shadow: 10px 10px 30px rgba(0, 0, 0, 0.5);
+    transition: transform 0.5s ease, box-shadow 0.3s ease;
+    will-change: transform;
+}
+
+.cards .image img:hover {
+    transform: scale(1.05);
+    box-shadow: 0 10px 40px rgba(255, 255, 255, 0.2);
+}
+
+/* Card Information */
+.cards .infos {
+    text-align: center;
+    padding-top: 10px;
+}
+
+.infos .name {
+    font-size: 28px;
+    color: var(--primary-color);
+    letter-spacing: 6px;
+    margin-bottom: 15px;
+    transition: all 0.4s ease;
+}
+
+/* Actions (Icons) */
+.actions {
+    margin-top: 20px;
+    display: flex;
+    justify-content: center; 
+    align-items: center;
+    gap: 12px;
+    flex-wrap: wrap;
+}
+
+.actions i {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 40px;
+    height: 40px;
+    color: var(--text-color);
+    border: 1px solid white;
+    font-size: 20px;
+    border-radius: 50%;
+    transition: all 0.3s ease-in-out;
+}
+
+.actions i:hover {
+    background-color: white;
+    color: #333;
+    transform: scale(1.2) rotate(10deg);
+    box-shadow: 0 0 15px rgba(255, 255, 255, 0.6);
+    cursor: pointer;
+}
+
+/* Card Button */
+.card .btn-details {
+    width: 100%;
+    height: 55px;
+    margin-top: 30px;
+    border-radius: 5px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #fff;
+    font-size: 22px;
+    letter-spacing: 8px;
+    font-weight: bold;
+    transition: transform 0.5s ease;
+}
+
+.card .btn-details:hover {
+    transform: scale(1.05);
+}
+
+/* Slider Animation */
+.cards label {
+    transform-origin: center center;
+}
+
+.cards label:nth-child(1) { transform: translate3d(0, 0, 0); }
+.cards label:nth-child(2) { transform: translate3d(-30%, 0, -120px); }
+.cards label:nth-child(3) { transform: translate3d(-60%, 0, -180px); }
+.cards label:nth-child(4) { transform: translate3d(-90%, 0, -240px); }
+.cards label:nth-child(5) { transform: translate3d(30%, 0, -120px); }
+.cards label:nth-child(6) { transform: translate3d(60%, 0, -180px); }
+.cards label:nth-child(7) { transform: translate3d(90%, 0, -240px); }
+
+/* Responsive Design */
+@media (max-width: 480px) {
+    .container {
+        justify-content: center;
+        align-items: center;
+    }
+
+    .cards {
+        margin-left: 10px;
+        max-width: 230px;
+        height: 300px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        transform: translateX(0);
+    }
+
+    .cards label {
+        width: auto;
+        justify-content: center;
+        align-items: center;
+        display: flex;
+    }
+
+    .cards .image img {
+        height: 240px;
+    }
+
+    .infos .name {
+        font-size: 20px;
+        letter-spacing: 3px;
+    }
+
+    .actions {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        gap: 10px;
+    }
+
+    .actions i {
+        width: 32px;
+        height: 32px;
+        font-size: 16px;
+    }
+
+    .card .btn-details {
+        height: 44px;
+        font-size: 16px;
+        letter-spacing: 5px;
+    }
+
+    /* Adjust Slider Animation */
+    .cards label:nth-child(2) { transform: translate3d(-20%, 0, -100px); }
+    .cards label:nth-child(3) { transform: translate3d(-40%, 0, -160px); }
+    .cards label:nth-child(4) { transform: translate3d(-60%, 0, -220px); }
+    .cards label:nth-child(5) { transform: translate3d(20%, 0, -100px); }
+    .cards label:nth-child(6) { transform: translate3d(40%, 0, -160px); }
+    .cards label:nth-child(7) { transform: translate3d(60%, 0, -220px); }
+}
