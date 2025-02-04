@@ -2,12 +2,12 @@
 @media (min-width: 768px) {
   .hero-silicon-text {
     font-size: 2rem;
-    margin-top: 4rem;
+    margin-top: 1rem;
   }
 
   .hero-follow-us-text {
     font-size: 2rem;
-    margin-top: 2rem;
+    margin-top: 10rem;
     margin-right: 1.2rem;
   }
 }
@@ -16,11 +16,11 @@
 @media (max-width: 767px) {
   .hero-silicon-text {
     font-size: 1.25rem;
-    margin-top: 2rem; 
+    margin-top: -5rem; 
   }
 
   .hero-follow-us-text {
     font-size: 1.2rem;
-    margin-top: 2rem;
+    margin-top: 7rem;
   }
 }
