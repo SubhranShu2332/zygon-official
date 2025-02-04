@@ -4,7 +4,7 @@ import AnimatedName from "../AnimatedName/AnimatedName";
 function Message() {
   return (
     <>
-      <AnimatedName title={"Message"} />
+      <AnimatedName title={"Special Message"} subHeading={"From Secretory General"} />
       <div className="min-h-screen relative overflow-hidden p-4 md:p-8 bg-gradient-to-br from-[#1a0f3c] via-[#2c1654] to-[#3d1d6b]">
         {/* Carnival Lights Effect */}
         <div className="fixed inset-0 z-0 bg-[radial-gradient(circle_at_20%_30%,rgba(255,214,0,0.3),transparent_70%),radial-gradient(circle_at_80%_70%,rgba(255,0,128,0.3),transparent_70%),radial-gradient(circle_at_50%_50%,rgba(0,255,255,0.2),transparent_70%)] blur-[40px] animate-[lightShow_10s_infinite] pointer-events-none"></div>
@@ -15,7 +15,7 @@ function Message() {
         <div className="max-w-7xl w-full mx-auto relative z-10">
           <header className="text-center mb-16 relative">
             <div className="inline-block">
-              <h1 className="text-4xl md:text-4xl text-3xl text-white font-light tracking-wider mb-4 relative after:content-[''] after:absolute after:bottom-[-5px] after:left-0 after:w-full after:h-px after:bg-white/50">
+              <h1 className="text-4xl md:text-4xl text-3xl text-white font-light tracking-wider mb-4 relative after:content-[''] after:absolute after:bottom-[-5px] after:left-0 after:w-full after:h-px after:bg-white/50 almendra-bold">
                 Message from the Secretary General
               </h1>
             </div>
@@ -39,7 +39,7 @@ function Message() {
                 <span className="absolute -top-8 -left-5 text-8xl text-white/10 font-serif">
                   "
                 </span>
-                <p className="text-base md:text-lg leading-relaxed text-gray-200 font-light relative after:content-[''] after:absolute after:bottom-[-10px] after:left-0 after:w-[50px] after:h-px after:bg-white/50">
+                <p className="text-xl md:text-2xl leading-relaxed text-gray-200 font-light relative after:content-[''] after:absolute after:bottom-[-10px] after:left-0 after:w-[50px] after:h-px after:bg-white/50 cookie-regular">
                   Welcome to Zygon 2025 – where dreams take flight and memories
                   shine bright! As your Secretary General, I'm thrilled to
                   present this year's spectacular celebration of creativity,
@@ -51,9 +51,9 @@ function Message() {
                 </p>
               </div>
 
-              <footer className="border-t border-white/10 pt-8 relative overflow-hidden">
+              <footer className="border-t border-white/10 pt-8 relative overflow-hidden almendra-bold">
                 <div className="flex flex-col items-end">
-                  <span className="text-xl md:text-2xl text-white font-['Playfair_Display'] mb-2 transition-all duration-300 hover:scale-110 hover:text-[#ff6b6b]">
+                  <span className="text-xl md:text-2xl text-white mb-2 transition-all duration-300 hover:scale-110 hover:text-[#ff6b6b]">
                     S. Manohar
                   </span>
                   <span className="text-xs md:text-sm text-gray-300 uppercase tracking-wider">

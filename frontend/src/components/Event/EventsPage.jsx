@@ -119,7 +119,7 @@ const EventsPage = () => {
 
   return (
     <>
-      <AnimatedName title={"Events"} />
+      <AnimatedName title={"Events"} subHeading={"Explore The Magical World"} />
       <div className="space space--small">
         <div className="cards_" ref={cardsContainerRef}>
           {eventsData.map((event, index) => (

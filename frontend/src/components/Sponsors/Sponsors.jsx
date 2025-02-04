@@ -172,7 +172,7 @@ function SponsorsPage() {
 
   return (
     <>
-        <AnimatedName title={"Sponsors"} ></AnimatedName>
+        <AnimatedName title={"Sponsors"} subHeading={"Coming Soon"} ></AnimatedName>
         <div
         style={{
           backgroundImage: `url(${darkCarnival})`,
@@ -220,7 +220,7 @@ function SponsorsPage() {
           <button
             className="bg-red-500 text-white hover:bg-red-600 font-bold py-4 px-8 rounded-lg"
             onClick={() => {
-              const url = "./brochure.pdf";
+              const url = "./ZYGON_BROCHURE.pdf";
               if (url) {
                 window.location.href = url;
               } else {
