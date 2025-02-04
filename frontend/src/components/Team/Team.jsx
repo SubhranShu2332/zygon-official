@@ -88,15 +88,15 @@ const Team = () => {
   };
 
   return (
-    <div className="min-h-screen bg-gray-900 flex items-center justify-center px-4">
-      <div className="relative w-full max-w-4xl">
+    <div className="min-h-screen bg-gray-900 flex items-center justify-center px-10">
+      <div className="relative w-full max-w-4xl  mt-16">
         <button
           onClick={prevSlide}
           className="absolute left-4 top-1/2 -translate-y-1/2 z-40 text-white hover:text-gray-300 transition-colors"
         >
           <ChevronLeft size={32} />
         </button>
-        
+
         <div className="relative h-[500px] flex items-center justify-center">
           {slides.map((slide, index) => (
             <div
@@ -117,7 +117,7 @@ const Team = () => {
                   <h3 className="text-2xl font-bold text-white tracking-wider mb-4">
                     {slide.name}
                   </h3>
-                  
+
                   <div className="flex justify-center gap-4 mb-6">
                     <button className="p-2 border border-white rounded-full text-white hover:bg-white hover:text-gray-800 transition-colors">
                       <Linkedin size={20} />
