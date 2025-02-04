@@ -26,9 +26,9 @@ export const AdminZygonControl = () => {
     e.preventDefault();
     setError("");
     try {
-      await axios.post("http://localhost:8000/api/v1/zygonInfo/ZygonTable", form);
+      await axios.post("https://backen-zygon.onrender.com/api/v1/zygonInfo/PostZygonTable", form);
       toast.success("Zygon Table Information added successfully!");
-      setForm({ EventName: "", Year: "", WinnersName: "", Position: "" });
+      setForm({ EventName: "", Year: "", WinnersName: "", Position: "", PonintSequre : "10" });
     } catch (err) {
       setError(err.response?.data?.message || "Something went wrong");
     }

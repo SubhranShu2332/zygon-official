@@ -7,12 +7,12 @@ import Countdown from "./components/Countdown/Countdown";
 import VideoSection from "./components/VideoSection/VideoSection";
 import Carousel from "./components/featureSection/Feature";
 import Footer from "./components/Footer/Footer";
-import StatisticsSection from "./components/NumberTicker/NoOfEvents"
+import StatisticsSection from "./components/NumberTicker/NoOfEvents";
 import Gallary from "./components/Gallery/Gallary";
-import ShirtCard from "./components/3dShirt/Shirt"
+import ShirtCard from "./components/3dShirt/Shirt";
 import SponsorsPage from "./components/Sponsors/Sponsors";
 import StickyHeader from "./components/StickyHeader/StickyHeader";
-import "animate.css"
+import "animate.css";
 import { AdminZygonControl } from "./components/admin/AdminZygonControl";
 import { UpdateZygonPage } from "./components/admin/AdminUpdataPage"
 import EventsPage from "./components/Event/EventsPage"
@@ -20,6 +20,7 @@ import WhatsNew from "./components/WhatsNew/WhatsNew";
 import Team from "./components/Team/Team";
 import Points from "./components/Points Table/Points";
 // import EventSruti from "./components/Event /EventSruti";
+import Message from "./components/Message/Message"
 
 const App = () => {
   const [screenLoading, setScreenLoading] = useState(true);
@@ -32,8 +33,7 @@ const App = () => {
   return (
     <Router>
       <div>
-        <StickyHeader></StickyHeader>
-
+        {!screenLoading && <StickyHeader />}
         <Routes>
           <Route
             path="/"
@@ -62,7 +62,22 @@ const App = () => {
               ) : (
                 <>
                   {/* <UniversalGlitterEffect> */}
-                    <EventsPage></EventsPage>
+                  <EventsPage></EventsPage>
+                  {/* </UniversalGlitterEffect> */}
+                </>
+              )
+            }
+          />
+
+          <Route
+            path="/Message"
+            element={
+              screenLoading ? ( // Changed from false to screenLoading
+                <Loader />
+              ) : (
+                <>
+                  {/* <UniversalGlitterEffect> */}
+                  <Message></Message>
                   {/* </UniversalGlitterEffect> */}
                 </>
               )
@@ -102,7 +117,6 @@ const App = () => {
               ) : (
                 <>
                   <SponsorsPage />
-                 
                 </>
               )
             }
@@ -155,17 +169,11 @@ const App = () => {
               )
             }
           />
-          <Route
-            path="/Team"
-            element={
-                  <Team></Team>
-            }
-          />
+          <Route path="/Team" element={<Team></Team>} />
         </Routes>
       </div>
       {/* <Footer /> */}
     </Router>
-
   );
 };
 

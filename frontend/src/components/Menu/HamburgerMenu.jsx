@@ -89,7 +89,8 @@ const HamburgerMenu = () => {
 
   const menuItems = [
     { name: "Whats New", icon: "🎡", link: "/Whatsnew" },
-    { name:  "Team", icon: "🔍", link: "/Team"},
+    { name: "Team", icon: "🔍", link: "/Team" },
+    { name: "Message", icon: "🔍", link: "/Message" },
     { name: "Events", icon: "🎪", link: "/Events" },
     { name: "Odyssey Cup", icon: "🎯", link: "/Odyssey" },
     { name: "Merchandise", icon: "👕", link: "/Shirt" },
@@ -111,7 +112,7 @@ const HamburgerMenu = () => {
           initial="closedTop"
           animate={isOpen ? "openTop" : "closedTop"}
           transition={{
-            duration: 0.25,
+            duration: 0.30,
             ease: [0.25, 0.1, 0.25, 1],
             translateX: { duration: 0.15 },
           }}

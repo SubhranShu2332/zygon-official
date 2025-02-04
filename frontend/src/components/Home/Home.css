@@ -1,0 +1,26 @@
+/* For devices with larger screens (Laptops/Desktops) */
+@media (min-width: 768px) {
+  .hero-silicon-text {
+    font-size: 2rem;
+    margin-top: 1rem;
+  }
+
+  .hero-follow-us-text {
+    font-size: 2rem;
+    margin-top: 10rem;
+    margin-right: 1.2rem;
+  }
+}
+
+/* For smaller devices (Phones/Smaller Tablets), keep the text smaller */
+@media (max-width: 767px) {
+  .hero-silicon-text {
+    font-size: 1.25rem;
+    margin-top: -5rem; 
+  }
+
+  .hero-follow-us-text {
+    font-size: 1.2rem;
+    margin-top: 7rem;
+  }
+}
