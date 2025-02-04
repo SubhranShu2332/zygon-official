@@ -89,7 +89,8 @@ const HamburgerMenu = () => {
 
   const menuItems = [
     { name: "Whats New", icon: "🎡", link: "/Whatsnew" },
-    { name:  "Team", icon: "🔍", link: "/Team"},
+    { name: "Team", icon: "🔍", link: "/Team" },
+    { name: "Message", icon: "🔍", link: "/Message" },
     { name: "Events", icon: "🎪", link: "/Events" },
     { name: "Odessey Cup", icon: "🎯", link: "#games" },
     { name: "Merchandise", icon: "👕", link: "/Shirt" },
