@@ -23,7 +23,10 @@ function AnimatedName({ title }) {
   const letters = title.split("");
 
   return (
-    <div className="hero-container" style={{fontFamily:"Black Bones",fontWeight:"bold"}}>
+    <div
+      className="hero-container"
+      style={{ fontFamily: "Black Bones", fontWeight: "bold" }}
+    >
       <div className="title-container">
         {letters.map((char, index) => (
           <span
