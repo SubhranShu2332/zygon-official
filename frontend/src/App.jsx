@@ -19,6 +19,7 @@ import { ZygonPointTable } from "./components/OdcPointTableTest/PointTable"
 import EventsPage from "./components/Event/EventsPage"
 import WhatsNew from "./components/WhatsNew/WhatsNew";
 import Team from "./components/Team/Team";
+import Points from "./components/Points Table/Points";
 // import EventSruti from "./components/Event /EventSruti";
 
 const App = () => {
@@ -138,7 +139,7 @@ const App = () => {
                 <Loader />
               ) : (
                 <>
-                  <ZygonPointTable />
+                  <Points/>
                 </>
               )
             }
