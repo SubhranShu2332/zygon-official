@@ -15,7 +15,6 @@ import StickyHeader from "./components/StickyHeader/StickyHeader";
 import "animate.css"
 import { AdminZygonControl } from "./components/admin/AdminZygonControl";
 import { UpdateZygonPage } from "./components/admin/AdminUpdataPage"
-import { ZygonPointTable } from "./components/OdcPointTableTest/PointTable"
 import EventsPage from "./components/Event/EventsPage"
 import WhatsNew from "./components/WhatsNew/WhatsNew";
 import Team from "./components/Team/Team";
@@ -133,7 +132,7 @@ const App = () => {
             }
           />
           <Route
-            path="/PointTable"
+            path="/Odyssey"
             element={
               screenLoading ? ( // Changed from `false` to `screenLoading`
                 <Loader />

@@ -29,15 +29,15 @@ function Cards({ houseName, score, events, image }) {
                 <tr>
                   <th className='border-b-2 p-2 text-sm sm:text-base'>Event Name</th>
                   <th className='border-b-2 p-2 text-sm sm:text-base'>Winner Name</th>
-                  <th className='border-b-2 p-2 text-sm sm:text-base'>Position</th>
+                  <th className='border-b-2 p-2 text-sm sm:text-base'>Points</th>
                 </tr>
               </thead>
               <tbody>
                 {events.map((event, index) => (
                   <tr key={index}>
-                    <td className='border-b p-2 text-xs sm:text-sm'>{event.eventName}</td>
-                    <td className='border-b p-2 text-xs sm:text-sm'>{event.winnerName}</td>
-                    <td className='border-b p-2 text-xs sm:text-sm'>{event.position}</td>
+                    <td className='border-b p-2 text-xs sm:text-sm'>{event.EventName}</td>
+                    <td className='border-b p-2 text-xs sm:text-sm'>{event.WinnersName}</td>
+                    <td className='border-b p-2 text-xs sm:text-sm'>{event.PonintSequre}</td>
                   </tr>
                 ))}
               </tbody>
