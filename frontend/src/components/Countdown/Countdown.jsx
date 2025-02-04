@@ -29,27 +29,38 @@ function Countdown() {
   );
 
   return (
-    <div className={styles.Countdownbody}  style={{fontFamily:"Carnival"}}>
-      <h1 className={styles.title}  style={{fontFamily:"Carnival"}}>Time Left For Carnival To Begin</h1>
+    <div className={styles.Countdownbody} style={{ fontFamily: "Carnival" }}>
+      <h1 className={styles.title} style={{ fontFamily: "Carnival" }}>
+        Time Left For Carnival To Begin
+      </h1>
 
       <div className={[styles.cardContainer]}>
         <div className={styles.days}>
           <Card time={daysLeft} />
-          <div className={styles.tags}>DAYS</div>
+          <div className={styles.tags} style={{ fontFamily: "Carnival" }}>
+            DAYS
+          </div>
         </div>
         <div className={styles.hours}>
           <Card time={hoursLeft} />
-          <div className={styles.tags}>HOURS</div>
+          <div className={styles.tags} style={{ fontFamily: "Carnival" }}>
+            HOURS
+          </div>
         </div>
         <div className={styles.minutes}>
           <Card time={minutesLeft} />
-          <div className={styles.tags}>MINUTES</div>
+          <div className={styles.tags} style={{ fontFamily: "Carnival" }}>
+            MINUTES
+          </div>
         </div>
         <div className={styles.seconds}>
           <Card time={secondsLeft} />
-          <div className={styles.tags}>SECONDS</div>
+          <div className={styles.tags} style={{ fontFamily: "Carnival" }}>
+            SECONDS
+          </div>
         </div>
       </div>
+      <br />
     </div>
   );
 }
