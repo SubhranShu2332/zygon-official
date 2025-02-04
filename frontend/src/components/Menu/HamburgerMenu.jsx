@@ -112,7 +112,7 @@ const HamburgerMenu = () => {
           initial="closedTop"
           animate={isOpen ? "openTop" : "closedTop"}
           transition={{
-            duration: 0.25,
+            duration: 0.30,
             ease: [0.25, 0.1, 0.25, 1],
             translateX: { duration: 0.15 },
           }}

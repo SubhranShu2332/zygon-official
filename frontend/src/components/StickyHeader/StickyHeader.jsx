@@ -7,6 +7,25 @@ const StickyHeader = () => {
   const [isScrollingUp, setIsScrollingUp] = useState(true);
   const [lastScrollPos, setLastScrollPos] = useState(0);
   const navigate = useNavigate();
+  const [windowWidth, setWindowWidth] = useState(window.innerWidth);
+
+  useEffect(() => {
+    const handleResize = () => setWindowWidth(window.innerWidth);
+
+    window.addEventListener("resize", handleResize);
+    return () => window.removeEventListener("resize", handleResize);
+  }, []);
+
+  // Set styles based on screen size
+  const getLogoStyles = () => {
+    if (windowWidth >= 1024) {
+      return { height: "75px", width: "110px" }; // Large screen
+    } else if (windowWidth >= 640) {
+      return { height: "65px", width: "90px" }; // Small screen (tablet)
+    } else {
+      return { height: "55px", width: "70px" }; // Default (mobile)
+    }
+  };
 
   useEffect(() => {
     const handleScroll = () => {
@@ -30,13 +49,15 @@ const StickyHeader = () => {
           <motion.img
             src="/siliconLogo.png"
             alt="Logo"
-            className="w-[5rem] hover:cursor-pointer"
+            className="hover:cursor-pointer"
             initial={{ opacity: 0, y: -20 }}
             animate={{ opacity: 1, y: 0 }}
             exit={{ opacity: 0, y: -20 }}
             transition={{ duration: 0.3 }}
-            style={{ height: "50px", width: "70px", }}
-            onClick={()=>{navigate('/')}}
+            style={getLogoStyles()}
+            onClick={() => {
+              navigate("/");
+            }}
           />
           <HamburgerMenu />
         </div>

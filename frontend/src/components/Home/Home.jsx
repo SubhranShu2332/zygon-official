@@ -1,8 +1,9 @@
 import React from "react";
 import StickyHeader from "../StickyHeader/StickyHeader";
-import { FaInstagram } from "react-icons/fa";
-import "animate.css"
-import HamburgerMenu from '../Menu/HamburgerMenu';
+import { FaLinkedin, FaInstagram } from "react-icons/fa";
+import "animate.css";
+import "./Home.css";
+import HamburgerMenu from "../Menu/HamburgerMenu";
 import Footer from "../Footer/Footer";
 
 const Hero = () => {
@@ -68,21 +69,23 @@ const Hero = () => {
               data-wow-delay="2s"
             >
               <div
-                className="mt-[-140px] animate__animated animate__fadeInUp wow"
+                className="hero-silicon-text animate__animated animate__fadeInUp wow"
                 style={{ writingMode: "vertical-rl" }}
                 data-wow-delay="2s"
               >
                 SILICON UNIVERSITY
               </div>
             </div>
-            <img
-              src="/test3.gif"
-              alt="Logo"
-              className="w-[17rem] md:w-[25rem] animate__animated animate__zoomIn wow"
-              data-wow-delay="1s"
-            />
+            <div>
+              <img
+                src="/test3.gif"
+                alt="Logo"
+                className="w-[16rem] md:w-[30rem] animate__animated animate__zoomIn wow"
+                data-wow-delay="1s"
+              />
+            </div>
             <div
-              className="mt-[280px] animate__animated animate__fadeInDown wow flex items-center"
+              className="hero-follow-us-text animate__animated animate__fadeInDown wow flex items-center"
               style={{
                 writingMode: "vertical-lr",
               }}
@@ -90,11 +93,12 @@ const Hero = () => {
             >
               FOLLOW US ON &ensp;
               <FaInstagram />
+              &ensp;
+              <FaLinkedin />
             </div>
           </div>
         </div>
       </div>
-      
     </>
   );
 };
