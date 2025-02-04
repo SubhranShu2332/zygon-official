@@ -33,8 +33,7 @@ const App = () => {
   return (
     <Router>
       <div>
-        <StickyHeader></StickyHeader>
-
+        {!screenLoading && <StickyHeader />}
         <Routes>
           <Route
             path="/"
