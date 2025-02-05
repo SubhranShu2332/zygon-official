@@ -664,7 +664,7 @@ const ExpandedCard = ({ active, setActive }) => (
   >
     <motion.div
       layoutId={`card-${active.title}`}
-      className="w-full md:h-auto h-full  md:h-auto max-w-xl bg-black lg:rounded-2xl shadow-2xl overflow-hidden"
+      className="w-full h-[100vh] md:h-1/2 max-w-xl bg-black lg:rounded-2xl shadow-2xl overflow-hidden"
     >
       <motion.div layoutId={`image-${active.title}`} className="relative">
         <img

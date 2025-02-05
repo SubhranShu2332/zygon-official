@@ -3,6 +3,8 @@ import AnimatedName from "../AnimatedName/AnimatedName";
 import "./OdesseyCup.css"
 import CarouselWeb from "../CarouselWeb/CarouselWeb";
 import { countries } from "../CarouselWeb/Data";
+import Points from "../Point Table/Point";
+
 
 function OdesseyCup() {
   useEffect(() => {
@@ -30,6 +32,7 @@ function OdesseyCup() {
         subHeading={"Let the Carnival Begin!"}
       />
 
+      <Points></Points>
       <div><CarouselWeb images={countries} /></div>
     </>
   );

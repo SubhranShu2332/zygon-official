@@ -7,7 +7,7 @@ export default function ShirtCard() {
     <>
       <AnimatedName title={"Merchandise "} subHeading={"Coming Soon"}></AnimatedName>
       <div
-        className="flex items-center justify-center min-h-screen p-6 relative bg-cover bg-center"
+        className="flex items-center justify-center min-h-screen p-6 relative bg-cover bg-center hidden"
         style={{
           backgroundImage: "url('bg7.png')",
           backgroundSize: "cover",

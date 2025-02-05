@@ -5,7 +5,6 @@ import CARD1 from '/CARD1.png';
 import CARD2 from '/CARD2.png';
 import CARD3 from '/CARD3.png';
 import CARD4 from '/CARD4.png';
-import AnimatedName from '../AnimatedName/AnimatedName';
 
 function Points() {
   const [houseData, setHouseData] = useState([]);
@@ -47,7 +46,7 @@ function Points() {
 
   return (
     <div>
-      <AnimatedName title="Odyssey Cup"></AnimatedName>
+      
       <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4 p-4">
         {error ? (
           <p className="text-red-500 text-center mb-4">{error}</p>
