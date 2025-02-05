@@ -1,21 +1,11 @@
-// import darkCarnival from "./4kk.png";
-import darkCarnival from "./4k.png";
-// import darkCarnival from "./bgSponsors.webp";
-// import darkCarnival from "./bg2.webp";
-// import { IconCloud } from "../IconCloud/IconCloud";
-
-
 import React, { useState } from "react";
 import { motion, AnimatePresence } from "framer-motion";
-
-import imageA from "/sit_logo.png";
+import imageA from "/sit_logo.png"; // Replace with your actual image paths
 import imageB from "/sit_logo.png";
 import imageC from "/sit_logo.png";
 import imageD from "/sit_logo.png";
 import AnimatedName from "../AnimatedName/AnimatedName";
-// import imageB from "./image.png";
-// import imageC from "./image.png";
-// import imageD from "./image.png";
+import darkCarnival from "./bgSponsors.webp"; // Import your background image
 
 function SponsorCard({ sponsor, isFlipped, onClick }) {
   const cardVariants = {
@@ -44,13 +34,8 @@ function SponsorCard({ sponsor, isFlipped, onClick }) {
   };
 
   return (
-    <>
     <motion.div
-      className="relative w-80 max-w-xs h-56 rounded-lg overflow-hidden shadow-2xl bg-opacity-90 backdrop-blur-lg cursor-pointer"
-      style={{
-        backgroundColor: "rgba(255, 255, 255, 0.1)",
-        boxShadow: "0 4px 15px rgba(0, 0, 0, 0.8)",
-      }}
+      className="relative w-full h-56 rounded-lg overflow-hidden shadow-2xl bg-opacity-90 backdrop-blur-lg cursor-pointer bg-white/10 shadow-lg"
       variants={cardVariants}
       whileHover="hover"
       whileTap="tap"
@@ -65,13 +50,17 @@ function SponsorCard({ sponsor, isFlipped, onClick }) {
             animate="visible"
             exit="hidden"
           >
-            <p className="text-gray-900 text-xl font-semibold">{sponsor.name}</p>
-            <p className="text-gray-700 text-center mt-2">{sponsor.description}</p>
+            <p className="text-white text-lg sm:text-xl font-semibold">
+              {sponsor.name}
+            </p>
+            <p className="text-gray-300 text-center mt-2 text-sm sm:text-base">
+              {sponsor.description}
+            </p>
             <a
               href={sponsor.website || "#"}
               target="_blank"
               rel="noopener noreferrer"
-              className="mt-4 text-blue-600 hover:underline"
+              className="mt-4 text-blue-600 hover:underline text-sm sm:text-base"
             >
               {sponsor.website ? "Visit Website" : "More Info Coming Soon"}
             </a>
@@ -87,24 +76,17 @@ function SponsorCard({ sponsor, isFlipped, onClick }) {
             <img
               src={sponsor.logo}
               alt={sponsor.name}
-              className="w-2/5 h-auto object-contain mx-auto p-1"
+              className="w-3/5 sm:w-2/5 h-auto object-contain mx-auto p-1"
             />
           </motion.div>
         )}
       </AnimatePresence>
-      {/* <IconCloud></IconCloud> */}
-    
     </motion.div>
-      {/* <IconCloud></IconCloud>*/}
-      </> 
   );
 }
 
 function SponsorsPage() {
-  const [flippedCard, setFlippedCard] = useState({
-    section: null,
-    index: null,
-  });
+  const [flippedCard, setFlippedCard] = useState({ section: null, index: null });
 
   const partners = [
     {
@@ -113,15 +95,13 @@ function SponsorsPage() {
         {
           name: "Company A",
           logo: imageA,
-          description:
-            "Company A is a leading tech company focusing on AI solutions.",
+          description: "Company A is a leading tech company focusing on AI solutions.",
           website: "https://www.company-a.com",
         },
         {
           name: "Company B",
           logo: imageB,
-          description:
-            "Company B offers innovative software development services.",
+          description: "Company B offers innovative software development services.",
           website: "https://www.company-b.com",
         },
       ],
@@ -143,93 +123,66 @@ function SponsorsPage() {
         },
       ],
     },
-    {
-      name: "Y Partner",
-      sponsors: [
-        {
-          name: "Company C",
-          logo: imageC,
-          description: "Company C specializes in sustainable energy solutions.",
-          website: "https://www.company-c.com",
-        },
-        {
-          name: "Company D",
-          logo: imageD,
-          description: "Company D provides high-quality consumer electronics.",
-          website: "https://www.company-d.com",
-        },
-      ],
-    },
   ];
 
   const handleCardClick = (section, index) => {
-    if (flippedCard.section === section && flippedCard.index === index) {
-      setFlippedCard({ section: null, index: null });
-    } else {
-      setFlippedCard({ section, index });
-    }
+    setFlippedCard((prev) =>
+      prev.section === section && prev.index === index
+        ? { section: null, index: null }
+        : { section, index }
+    );
   };
 
   return (
     <>
-        <AnimatedName title={"Sponsors"} subHeading={"Coming Soon"} ></AnimatedName>
-        <div
+      <AnimatedName title="Sponsors" />
+      <div
+        className="pt-12 min-h-screen text-white font-cookie flex flex-col" // Tailwind classes
         style={{
           backgroundImage: `url(${darkCarnival})`,
           backgroundSize: "cover",
           backgroundPosition: "center",
           backgroundRepeat: "no-repeat",
-          minHeight: "100vh",
-          color: "#fff",
-          fontFamily:"Cookie"
+          backgroundAttachment:"fixed"
         }}
-        className="pt-12"
       >
-        <nav
-          aria-label="Main navigation"
-          className="text-gray-800 p-4 pt-12 shadow-lg"
-        >
-          <h1 className="text-6xl font-extrabold text-center text-white drop-shadow-lg" style={{fontFamily:"Carnival"}}>
-            Our Sponsors
-          </h1>
-        </nav>
-        {partners.map((partner, sectionIndex) => (
-          <div key={partner.name} className="bg-cover bg-center bg-no-repeat px-4 py-8">
-            <h1 className="text-center font-bold text-2xl mb-8">
-              <i>{partner.name}</i>
-            </h1>
-            <div className="grid gap-8 grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-3 mx-8 max-w-7xl">
-              {partner.sponsors.map((sponsor, index) => (
-                <SponsorCard
-                  key={`${partner.name}-${sponsor.name}-${index}`}
-                  sponsor={sponsor}
-                  isFlipped={
-                    flippedCard.section === sectionIndex && flippedCard.index === index
-                  }
-                  onClick={() => handleCardClick(sectionIndex, index)}
-                />
-              ))}
+        <div className="container mx-auto">
+          {partners.map((partner, sectionIndex) => (
+            <div key={partner.name} className="px-4 py-8"
+            style={{fontFamily:"c"}}>
+              <h1 className="text-center font-bold text-xl sm:text-2xl mb-8">
+                <i>{partner.name}</i>
+              </h1>
+              <div className="grid gap-6 grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 xl:grid-cols-5 mx-auto max-w-7xl">
+                {partner.sponsors.map((sponsor, index) => (
+                  <SponsorCard
+                    key={`${partner.name}-${sponsor.name}-${index}`}
+                    sponsor={sponsor}
+                    isFlipped={
+                      flippedCard.section === sectionIndex &&
+                      flippedCard.index === index
+                    }
+                    onClick={() => handleCardClick(sectionIndex, index)}
+                  />
+                ))}
+              </div>
             </div>
+          ))}
+          <div className="container mx-auto py-16 px-4 mt-12 text-center shadow-lg rounded-lg"
+          style={{fontFamily:"carnival"}}>
+            <h1 className="text-3xl sm:text-4xl font-bold mb-8">SPONSOR US!</h1>
+            <p className="mb-8 max-w-xl mx-auto text-lg sm:text-3xl">
+              Your partnership with ZYGON ensures the success of our event.
+            </p>
+            <a
+              className="bg-red-500 text-white hover:bg-red-600 font-bold py-3 sm:py-4 px-6 sm:px-8 rounded-lg"
+              style={{fontFamily:"c",fontWeight:"700"}}
+              href = "https://drive.google.com/file/d/1jpqoX4THQhI0PwBP599mNS8M-GNboh_1/view?usp=drivesdk"
+              target="_blank"
+            >
+              SPONSORSHIP BROCHURE
+            </a>
           </div>
-        ))}
-        <div className="container text-white mx-auto py-16 px-4 mt-12 text-center shadow-lg rounded-lg">
-          <h1 className="text-4xl font-bold mb-8" style={{fontFamily:"Carnival"}}>SPONSOR US!</h1>
-          <p className=" mb-8 max-w-xl mx-auto text-3xl">
-            Your partnership with ZYGON ensures the success of our event.
-          </p>
-          <button
-            className="bg-red-500 text-white hover:bg-red-600 font-bold py-4 px-8 rounded-lg"
-            onClick={() => {
-              const url = "./ZYGON_BROCHURE.pdf";
-              if (url) {
-                window.location.href = url;
-              } else {
-                console.error("Brochure not found");
-              }
-            }} style={{fontFamily:"Carnival"}}
-          >
-            SPONSORSHIP BROCHURE
-          </button>
         </div>
       </div>
     </>
