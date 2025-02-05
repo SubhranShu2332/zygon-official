@@ -20,6 +20,7 @@ import EventsPage from "./components/Event/EventsPage";
 import WhatsNew from "./components/WhatsNew/WhatsNew";
 import Team from "./components/Team/Team";
 import Message from "./components/Message/Message";
+import Navigation from "./components/Tabs/Tab2"
 import AnimatedName from "./components/AnimatedName/AnimatedName";
 // import EventSruti from "./components/Event /EventSruti";
 
@@ -65,6 +66,7 @@ const App = () => {
                 <>
                   {/* <UniversalGlitterEffect> */}
                   <EventsPage></EventsPage>
+                  {/* <Navigation /> */}
                   {/* </UniversalGlitterEffect> */}
                 </>
               )
