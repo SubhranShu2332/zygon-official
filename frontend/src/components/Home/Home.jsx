@@ -69,7 +69,7 @@ const Hero = () => {
               data-wow-delay="2s"
             >
               <div
-                className="hero-silicon-text animate__animated animate__fadeInUp wow"
+                className="hero-silicon-text animate__animated animate__fadeInUp wow almendra-regular"
                 style={{ writingMode: "vertical-rl" }}
                 data-wow-delay="2s"
               >
@@ -85,7 +85,7 @@ const Hero = () => {
               />
             </div>
             <div
-              className="hero-follow-us-text animate__animated animate__fadeInDown wow flex items-center"
+              className="hero-follow-us-text animate__animated animate__fadeInDown wow flex items-center almendra-regular"
               style={{
                 writingMode: "vertical-lr",
               }}

@@ -13,10 +13,6 @@ const categories = {
   Technical: [
     { title: "Tech Talk", image: pic1, description: "A seminar on AI and ML.", ctaLink: "#", ctaText: "Register Now!" },
     { title: "Hackathon", image: pic2, description: "A 24-hour coding competition.", ctaLink: "#", ctaText: "Join Now!" },
-    { title: "Football Tournament", image: pic3, description: "Show your skills on the field!", ctaLink: "#", ctaText: "Sign Up!" },
-    { title: "Basketball Match", image: pic4, description: "Compete with the best!", ctaLink: "#", ctaText: "Register Now!" },
-    { title: "Football Tournament", image: pic3, description: "Show your skills on the field!", ctaLink: "#", ctaText: "Sign Up!" },
-    { title: "Basketball Match", image: pic4, description: "Compete with the best!", ctaLink: "#", ctaText: "Register Now!" },
   ],
   Cultural: [
     { title: "Music Fest", image: pic3, description: "A night of amazing performances.", ctaLink: "#", ctaText: "Book Now!" },
