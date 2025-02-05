@@ -1,6 +1,7 @@
 import { useState } from "react";
 import { ChevronLeft, ChevronRight } from "lucide-react";
 import { FaLinkedin, FaInstagram, FaGithub, FaEnvelope } from "react-icons/fa";
+import AnimatedName from "../AnimatedName/AnimatedName";
 const Team = () => {
   const [currentSlide, setCurrentSlide] = useState(0);
 
@@ -89,68 +90,71 @@ const Team = () => {
   };
 
   return (
-    <div className="min-h-screen bg-gray-900 flex items-center justify-center px-10">
-      <div className="relative w-full max-w-4xl  mt-8">
-        <button
-          onClick={prevSlide}
-          className="absolute left-4 top-1/2 -translate-y-1/2 z-40 text-white hover:text-gray-300 transition-colors"
-        >
-          <ChevronLeft size={32} />
-        </button>
+    <>
+    <AnimatedName title={"Meet  The  Team"} subHeading={"Brains Behind The Website"}></AnimatedName>
+      <div className="min-h-screen bg-gray-900 flex items-center justify-center px-10">
+        <div className="relative w-full max-w-4xl  mt-8">
+          <button
+            onClick={prevSlide}
+            className="absolute left-4 top-1/2 -translate-y-1/2 z-40 text-white hover:text-gray-300 transition-colors"
+          >
+            <ChevronLeft size={32} />
+          </button>
 
-        <div className="relative h-[500px] flex items-center justify-center">
-          {slides.map((slide, index) => (
-            <div
-              key={slide.id}
-              className="absolute w-full max-w-sm transition-all duration-500 ease-in-out"
-              style={getSlideStyles(index)}
-            >
-              <div className="bg-gray-800 rounded-xl p-6 shadow-2xl">
-                <div className="relative overflow-hidden rounded-lg">
-                  <img
-                    src={slide.image}
-                    alt={slide.name}
-                    className="w-full h-64 object-cover transform transition-transform duration-500 hover:scale-105"
-                  />
-                </div>
-
-                <div className="mt-6 text-center">
-                  <h3 className="text-2xl font-bold text-white tracking-wider mb-4">
-                    {slide.name}
-                  </h3>
-
-                  <div className="flex justify-center gap-4 mb-6">
-                    <button className="p-2 border border-white rounded-full text-white hover:bg-white hover:text-gray-800 transition-colors">
-                      <FaLinkedin size={20} />
-                    </button>
-                    <button className="p-2 border border-white rounded-full text-white hover:bg-white hover:text-gray-800 transition-colors">
-                      <FaInstagram size={20} />
-                    </button>
-                    <button className="p-2 border border-white rounded-full text-white hover:bg-white hover:text-gray-800 transition-colors">
-                      <FaGithub size={20} />
-                    </button>
-                    <button className="p-2 border border-white rounded-full text-white hover:bg-white hover:text-gray-800 transition-colors">
-                      <FaEnvelope size={20} />
-                    </button>
+          <div className="relative h-[500px] flex items-center justify-center">
+            {slides.map((slide, index) => (
+              <div
+                key={slide.id}
+                className="absolute w-full max-w-sm transition-all duration-500 ease-in-out"
+                style={getSlideStyles(index)}
+              >
+                <div className="bg-gray-800 rounded-xl p-6 shadow-2xl">
+                  <div className="relative overflow-hidden rounded-lg">
+                    <img
+                      src={slide.image}
+                      alt={slide.name}
+                      className="w-full h-64 object-cover transform transition-transform duration-500 hover:scale-105"
+                    />
                   </div>
 
-                  {/* <button className="w-full py-3 bg-gray-700 text-white rounded-lg text-lg tracking-widest font-bold hover:bg-gray-600 transition-colors">
-                    DETAILS
-                  </button> */}
+                  <div className="mt-6 text-center">
+                    <h3 className="text-2xl font-bold text-white tracking-wider mb-4">
+                      {slide.name}
+                    </h3>
+
+                    <div className="flex justify-center gap-4 mb-6">
+                      <button className="p-2 border border-white rounded-full text-white hover:bg-white hover:text-gray-800 transition-colors">
+                        <FaLinkedin size={20} />
+                      </button>
+                      <button className="p-2 border border-white rounded-full text-white hover:bg-white hover:text-gray-800 transition-colors">
+                        <FaInstagram size={20} />
+                      </button>
+                      <button className="p-2 border border-white rounded-full text-white hover:bg-white hover:text-gray-800 transition-colors">
+                        <FaGithub size={20} />
+                      </button>
+                      <button className="p-2 border border-white rounded-full text-white hover:bg-white hover:text-gray-800 transition-colors">
+                        <FaEnvelope size={20} />
+                      </button>
+                    </div>
+
+                    {/* <button className="w-full py-3 bg-gray-700 text-white rounded-lg text-lg tracking-widest font-bold hover:bg-gray-600 transition-colors">
+                      DETAILS
+                    </button> */}
+                  </div>
                 </div>
               </div>
-            </div>
-          ))}
-        </div>
+            ))}
+          </div>
 
-        <button
-          onClick={nextSlide}
-          className="absolute right-4 top-1/2 -translate-y-1/2 z-40 text-white hover:text-gray-300 transition-colors"
-        >
-          <ChevronRight size={32} />
-        </button>
+          <button
+            onClick={nextSlide}
+            className="absolute right-4 top-1/2 -translate-y-1/2 z-40 text-white hover:text-gray-300 transition-colors"
+          >
+            <ChevronRight size={32} />
+          </button>
+        </div>
       </div>
-    </div>
+    </>
   );
 };
 

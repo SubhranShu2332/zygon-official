@@ -101,7 +101,7 @@ const VideoSection = () => {
                 </div>
 
 
-                <div className="marqueesContainer w-[400vw] md:w-full h-screen relative overflow-hidden bg-[url(/bg3.jpg)] bg-cover text-white " style={{ fontFamily: "Carnival" }}>
+                <div className="marqueesContainer w-[400vw] md:w-full h-screen relative overflow-hidden bg-[url(/bgvideo.webp)] bg-cover text-white bg-center md:bg-[url(/bgvideo2.webp)]" style={{ fontFamily: "Carnival" }}>
                     <div className="slidem scale-[1.1] absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[90%]" style={{ fontFamily: "Carnival" }}>
 
                         {['lft-side', 'rht-side', 'lft-side', 'rht-side'].map((side, index) => (

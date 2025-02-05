@@ -1,7 +1,7 @@
 import "./Animatedmodule.css";
 import { useState, useEffect } from "react";
 
-function AnimatedName({ title }) {
+function AnimatedName({ title,subHeading }) {
   const [animate, setAnimate] = useState(false);
   const [showSubHeading, setShowSubHeading] = useState(false);
 
@@ -41,7 +41,7 @@ function AnimatedName({ title }) {
       </div>
       {showSubHeading && (
         <div className="sub-heading animate-sub-heading">
-          ─── 〔 A cultural extravaganza 〕───
+          ─── 〔 {subHeading} 〕───
         </div>
       )}
     </div>

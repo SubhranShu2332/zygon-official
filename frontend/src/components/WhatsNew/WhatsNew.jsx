@@ -25,8 +25,8 @@ function WhatsNew() {
 
   return (
     <>
-      <AnimatedName title={"What's New"} />
-      <div className="min-h-screen relative overflow-hidden p-6 md:p-8 bg-gradient-to-br from-[#1a0f3c] via-[#2c1654] to-[#3d1d6b]">
+      <AnimatedName title={"What's New"} subHeading={"Explore The Carnival"}/>
+      <div className="min-h-screen relative overflow-hidden p-4 md:p-8 bg-gradient-to-br from-[#1a0f3c] via-[#2c1654] to-[#3d1d6b]">
         {/* Carnival Lights Effect */}
         <div className="fixed inset-0 z-0 bg-[radial-gradient(circle_at_20%_30%,rgba(255,214,0,0.3),transparent_70%),radial-gradient(circle_at_80%_70%,rgba(255,0,128,0.3),transparent_70%),radial-gradient(circle_at_50%_50%,rgba(0,255,255,0.2),transparent_70%)] blur-[40px] animate-[lightShow_10s_infinite] pointer-events-none"></div>
 
