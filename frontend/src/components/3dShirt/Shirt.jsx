@@ -5,7 +5,7 @@ import AnimatedName from "../AnimatedName/AnimatedName";
 export default function ShirtCard() {
   return (
     <>
-      <AnimatedName title={"Merchandise "}></AnimatedName>
+      <AnimatedName title={"Merchandise "} subHeading={"Coming Soon"}></AnimatedName>
       <div
         className="flex items-center justify-center min-h-screen p-6 relative bg-cover bg-center"
         style={{

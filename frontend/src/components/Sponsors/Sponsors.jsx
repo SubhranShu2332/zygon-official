@@ -135,9 +135,14 @@ function SponsorsPage() {
 
   return (
     <>
+<<<<<<< HEAD
       <AnimatedName title="Sponsors" />
       <div
         className="pt-12 min-h-screen text-white font-cookie flex flex-col" // Tailwind classes
+=======
+        <AnimatedName title={"Sponsors"} subHeading={"Coming Soon"} ></AnimatedName>
+        <div
+>>>>>>> a94f61b3cd4eadb2607e93c2c151a04e782629f3
         style={{
           backgroundImage: `url(${darkCarnival})`,
           backgroundSize: "cover",
@@ -183,6 +188,28 @@ function SponsorsPage() {
               SPONSORSHIP BROCHURE
             </a>
           </div>
+<<<<<<< HEAD
+=======
+        ))}
+        <div className="container text-white mx-auto py-16 px-4 mt-12 text-center shadow-lg rounded-lg">
+          <h1 className="text-4xl font-bold mb-8" style={{fontFamily:"Carnival"}}>SPONSOR US!</h1>
+          <p className=" mb-8 max-w-xl mx-auto text-3xl">
+            Your partnership with ZYGON ensures the success of our event.
+          </p>
+          <button
+            className="bg-red-500 text-white hover:bg-red-600 font-bold py-4 px-8 rounded-lg"
+            onClick={() => {
+              const url = "./ZYGON_BROCHURE.pdf";
+              if (url) {
+                window.location.href = url;
+              } else {
+                console.error("Brochure not found");
+              }
+            }} style={{fontFamily:"Carnival"}}
+          >
+            SPONSORSHIP BROCHURE
+          </button>
+>>>>>>> a94f61b3cd4eadb2607e93c2c151a04e782629f3
         </div>
       </div>
     </>

@@ -20,6 +20,9 @@ import EventsPage from "./components/Event/EventsPage";
 import WhatsNew from "./components/WhatsNew/WhatsNew";
 import Team from "./components/Team/Team";
 import Message from "./components/Message/Message";
+import OdesseyCup from "./components/OdesseyCup/OdesseyCup";
+import Navigation from "./components/Tabs/Tab2"
+import AnimatedName from "./components/AnimatedName/AnimatedName";
 // import EventSruti from "./components/Event /EventSruti";
 
 const App = () => {
@@ -41,6 +44,7 @@ const App = () => {
               screenLoading ? ( // Changed from false to screenLoading
                 <Loader />
               ) : (
+                // <AnimatedName title={"ZYGON 2024"}></AnimatedName>
                 <>
                   <Home />
                   <About />
@@ -63,6 +67,7 @@ const App = () => {
                 <>
                   {/* <UniversalGlitterEffect> */}
                   <EventsPage></EventsPage>
+                  {/* <Navigation /> */}
                   {/* </UniversalGlitterEffect> */}
                 </>
               )
@@ -78,6 +83,20 @@ const App = () => {
                 <>
                   {/* <UniversalGlitterEffect> */}
                   <Message></Message>
+                  {/* </UniversalGlitterEffect> */}
+                </>
+              )
+            }
+          />
+          <Route
+            path="/Odesseycup"
+            element={
+              screenLoading ? ( // Changed from false to screenLoading
+                <Loader />
+              ) : (
+                <>
+                  {/* <UniversalGlitterEffect> */}
+                  <OdesseyCup></OdesseyCup>
                   {/* </UniversalGlitterEffect> */}
                 </>
               )

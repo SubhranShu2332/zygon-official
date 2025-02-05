@@ -88,17 +88,17 @@ const HamburgerMenu = () => {
   });
 
   const menuItems = [
-    { name: "Whats New", icon: "🎡", link: "/Whatsnew" },
-    { name: "Team", icon: "🔍", link: "/Team" },
-    { name: "Message", icon: "🔍", link: "/Message" },
-    { name: "Events", icon: "🎪", link: "/Events" },
-    { name: "Odessey Cup", icon: "🎯", link: "#games" },
+    { name: "What's New", icon: "🎡", link: "/Whatsnew" },
+    { name: "Meet The Team", icon: "🔍", link: "/Team" },
+    { name: "Special Message", icon: "🔍", link: "/Message" },
+    { name: "Explore Events", icon: "🎪", link: "/Events" },
+    { name: "Odessey Cup", icon: "🎯", link: "/Odesseycup" },
     { name: "Merchandise", icon: "👕", link: "/Shirt" },
     { name: "Sponsers", icon: "🎫", link: "/Sponsors" },
   ];
 
   return (
-    <>
+    <div className="almendra-bold text-center">
       <motion.button
         className={styles.hamburgerButton}
         onClick={toggleMenu}
@@ -171,7 +171,7 @@ const HamburgerMenu = () => {
           </motion.div>
         )}
       </AnimatePresence>
-    </>
+    </div>
   );
 };
 
